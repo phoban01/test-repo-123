@@ -1,0 +1,3 @@
+data:
+  message: "Hello from ocm-controller"
+  replicas: 2
