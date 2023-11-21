@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    "owner": "operations"
+  labels:
+    app: podinfo
+  name: podinfo
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: podinfo
+  template:
+    metadata:
+      labels:
+        app: podinfo
+    spec:
+      containers:
+      - image: ghcr.io/stefanprodan/podinfo:6.3.6
+        imagePullPolicy: IfNotPresent
+        name: podinfo
