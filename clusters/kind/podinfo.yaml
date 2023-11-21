@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   annotations:
     "owner": "operations"
+    "kustomize.toolkit.fluxcd.io/ssa": "IfNotPresent"
   labels:
     app: podinfo
   name: podinfo
